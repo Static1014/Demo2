@@ -19,6 +19,8 @@
 		B35498CE19767D6C00E86167 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35498B619767D6C00E86167 /* UIKit.framework */; };
 		B35498D619767D6C00E86167 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B35498D419767D6C00E86167 /* InfoPlist.strings */; };
 		B35498D819767D6C00E86167 /* Demo2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35498D719767D6C00E86167 /* Demo2Tests.m */; };
+		B35498E519767DC200E86167 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35498E319767DC200E86167 /* WebViewController.m */; };
+		B35498E619767DC200E86167 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35498E419767DC200E86167 /* WebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		B35498D319767D6C00E86167 /* Demo2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo2Tests-Info.plist"; sourceTree = "<group>"; };
 		B35498D519767D6C00E86167 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B35498D719767D6C00E86167 /* Demo2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo2Tests.m; sourceTree = "<group>"; };
+		B35498E219767DC200E86167 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = WebViewController/WebViewController.h; sourceTree = "<group>"; };
+		B35498E319767DC200E86167 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = WebViewController/WebViewController.m; sourceTree = "<group>"; };
+		B35498E419767DC200E86167 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebViewController.xib; path = WebViewController/WebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,7 @@
 		B35498B819767D6C00E86167 /* Demo2 */ = {
 			isa = PBXGroup;
 			children = (
+				B35498E119767D9200E86167 /* WebView */,
 				B35498C119767D6C00E86167 /* AppDelegate.h */,
 				B35498C219767D6C00E86167 /* AppDelegate.m */,
 				B35498C419767D6C00E86167 /* Images.xcassets */,
@@ -142,6 +148,16 @@
 				B35498D419767D6C00E86167 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B35498E119767D9200E86167 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				B35498E219767DC200E86167 /* WebViewController.h */,
+				B35498E319767DC200E86167 /* WebViewController.m */,
+				B35498E419767DC200E86167 /* WebViewController.xib */,
+			);
+			name = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35498E619767DC200E86167 /* WebViewController.xib in Resources */,
 				B35498BD19767D6C00E86167 /* InfoPlist.strings in Resources */,
 				B35498C519767D6C00E86167 /* Images.xcassets in Resources */,
 			);
@@ -240,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B35498C319767D6C00E86167 /* AppDelegate.m in Sources */,
+				B35498E519767DC200E86167 /* WebViewController.m in Sources */,
 				B35498BF19767D6C00E86167 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo2/Demo2-Prefix.pch";
 				INFOPLIST_FILE = "Demo2/Demo2-Info.plist";
@@ -370,6 +389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo2/Demo2-Prefix.pch";
 				INFOPLIST_FILE = "Demo2/Demo2-Info.plist";

@@ -7,15 +7,24 @@
 //
 
 #import "AppDelegate.h"
+#import "WebViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+
+    WebViewController *web = [[WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:web];
+    [web release];
+
+    self.window.rootViewController = nav;
+    [nav release];
+
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 
