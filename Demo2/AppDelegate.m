@@ -18,6 +18,7 @@
     WebViewController *web = [[WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:web];
     [web release];
+    nav.navigationBar.translucent = NO;
 
     self.window.rootViewController = nav;
     [nav release];

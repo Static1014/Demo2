@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebViewController : UIViewController
+@interface WebViewController : UIViewController<UIWebViewDelegate>
 
+@property (retain, nonatomic) IBOutlet UIWebView *webView;
+@property (retain, nonatomic) IBOutlet UIView *menuView;
+- (IBAction)clickOne:(id)sender;
+- (IBAction)clickTwo:(id)sender;
+- (IBAction)clickThree:(id)sender;
+- (IBAction)clickFour:(id)sender;
+- (IBAction)clickMenuView:(id)sender;
 @end
