@@ -21,6 +21,8 @@
 		B35498D819767D6C00E86167 /* Demo2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35498D719767D6C00E86167 /* Demo2Tests.m */; };
 		B35498E519767DC200E86167 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35498E319767DC200E86167 /* WebViewController.m */; };
 		B35498E619767DC200E86167 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35498E419767DC200E86167 /* WebViewController.xib */; };
+		B35498EB1978BD1B00E86167 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35498E91978BD1B00E86167 /* GCDViewController.m */; };
+		B35498EC1978BD1B00E86167 /* GCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35498EA1978BD1B00E86167 /* GCDViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		B35498E219767DC200E86167 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = WebViewController/WebViewController.h; sourceTree = "<group>"; };
 		B35498E319767DC200E86167 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = WebViewController/WebViewController.m; sourceTree = "<group>"; };
 		B35498E419767DC200E86167 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebViewController.xib; path = WebViewController/WebViewController.xib; sourceTree = "<group>"; };
+		B35498E81978BD1B00E86167 /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDViewController.h; path = GCDViewController/GCDViewController.h; sourceTree = "<group>"; };
+		B35498E91978BD1B00E86167 /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDViewController.m; path = GCDViewController/GCDViewController.m; sourceTree = "<group>"; };
+		B35498EA1978BD1B00E86167 /* GCDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GCDViewController.xib; path = GCDViewController/GCDViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,7 @@
 		B35498B819767D6C00E86167 /* Demo2 */ = {
 			isa = PBXGroup;
 			children = (
+				B35498E71978BCED00E86167 /* GCD */,
 				B35498E119767D9200E86167 /* WebView */,
 				B35498C119767D6C00E86167 /* AppDelegate.h */,
 				B35498C219767D6C00E86167 /* AppDelegate.m */,
@@ -158,6 +164,16 @@
 				B35498E419767DC200E86167 /* WebViewController.xib */,
 			);
 			name = WebView;
+			sourceTree = "<group>";
+		};
+		B35498E71978BCED00E86167 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				B35498E81978BD1B00E86167 /* GCDViewController.h */,
+				B35498E91978BD1B00E86167 /* GCDViewController.m */,
+				B35498EA1978BD1B00E86167 /* GCDViewController.xib */,
+			);
+			name = GCD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +257,7 @@
 				B35498E619767DC200E86167 /* WebViewController.xib in Resources */,
 				B35498BD19767D6C00E86167 /* InfoPlist.strings in Resources */,
 				B35498C519767D6C00E86167 /* Images.xcassets in Resources */,
+				B35498EC1978BD1B00E86167 /* GCDViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +279,7 @@
 				B35498C319767D6C00E86167 /* AppDelegate.m in Sources */,
 				B35498E519767DC200E86167 /* WebViewController.m in Sources */,
 				B35498BF19767D6C00E86167 /* main.m in Sources */,
+				B35498EB1978BD1B00E86167 /* GCDViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

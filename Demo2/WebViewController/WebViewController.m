@@ -7,6 +7,7 @@
 //
 
 #import "WebViewController.h"
+#import "GCDViewController.h"
 
 @interface WebViewController () {
     BOOL menuIsShow;
@@ -94,7 +95,7 @@
     if (!menuIsShow) {
         menuIsShow = YES;
 
-        [UIView animateWithDuration:0.6 animations:^{
+        [UIView animateWithDuration:0.4 animations:^{
             CGRect frame = _menuView.frame;
             frame.origin.x = 0;
             _menuView.frame = frame;
@@ -102,7 +103,7 @@
     } else {
         menuIsShow = NO;
         
-        [UIView animateWithDuration:0.6 animations:^{
+        [UIView animateWithDuration:0.8 animations:^{
             CGRect frame = _menuView.frame;
             frame.origin.x = 320;
             _menuView.frame = frame;
@@ -114,7 +115,9 @@
     if (menuIsShow) {
         [self showRightMenu];
     }
-    NSLog(@"click 1111111");
+
+    GCDViewController *one = [[GCDViewController alloc]initWithNibName:@"GCDViewController" bundle:nil];
+    [self.navigationController pushViewController:one animated:YES];
 }
 
 - (IBAction)clickTwo:(id)sender {
