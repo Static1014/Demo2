@@ -23,6 +23,8 @@
 		B35498E619767DC200E86167 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35498E419767DC200E86167 /* WebViewController.xib */; };
 		B35498EB1978BD1B00E86167 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35498E91978BD1B00E86167 /* GCDViewController.m */; };
 		B35498EC1978BD1B00E86167 /* GCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35498EA1978BD1B00E86167 /* GCDViewController.xib */; };
+		B35498FD1978D46100E86167 /* BusinessUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B35498FA1978D46100E86167 /* BusinessUtil.m */; };
+		B35498FE1978D46100E86167 /* MyUncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B35498FC1978D46100E86167 /* MyUncaughtExceptionHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		B35498E81978BD1B00E86167 /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDViewController.h; path = GCDViewController/GCDViewController.h; sourceTree = "<group>"; };
 		B35498E91978BD1B00E86167 /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDViewController.m; path = GCDViewController/GCDViewController.m; sourceTree = "<group>"; };
 		B35498EA1978BD1B00E86167 /* GCDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GCDViewController.xib; path = GCDViewController/GCDViewController.xib; sourceTree = "<group>"; };
+		B35498F91978D46100E86167 /* BusinessUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusinessUtil.h; path = Util/BusinessUtil.h; sourceTree = "<group>"; };
+		B35498FA1978D46100E86167 /* BusinessUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessUtil.m; path = Util/BusinessUtil.m; sourceTree = "<group>"; };
+		B35498FB1978D46100E86167 /* MyUncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyUncaughtExceptionHandler.h; path = Util/MyUncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		B35498FC1978D46100E86167 /* MyUncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyUncaughtExceptionHandler.m; path = Util/MyUncaughtExceptionHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +123,11 @@
 		B35498B819767D6C00E86167 /* Demo2 */ = {
 			isa = PBXGroup;
 			children = (
-				B35498E71978BCED00E86167 /* GCD */,
-				B35498E119767D9200E86167 /* WebView */,
 				B35498C119767D6C00E86167 /* AppDelegate.h */,
 				B35498C219767D6C00E86167 /* AppDelegate.m */,
+				B35498ED1978D22D00E86167 /* Util */,
+				B35498E71978BCED00E86167 /* GCD */,
+				B35498E119767D9200E86167 /* WebView */,
 				B35498C419767D6C00E86167 /* Images.xcassets */,
 				B35498B919767D6C00E86167 /* Supporting Files */,
 			);
@@ -174,6 +181,17 @@
 				B35498EA1978BD1B00E86167 /* GCDViewController.xib */,
 			);
 			name = GCD;
+			sourceTree = "<group>";
+		};
+		B35498ED1978D22D00E86167 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B35498F91978D46100E86167 /* BusinessUtil.h */,
+				B35498FA1978D46100E86167 /* BusinessUtil.m */,
+				B35498FB1978D46100E86167 /* MyUncaughtExceptionHandler.h */,
+				B35498FC1978D46100E86167 /* MyUncaughtExceptionHandler.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +297,9 @@
 				B35498C319767D6C00E86167 /* AppDelegate.m in Sources */,
 				B35498E519767DC200E86167 /* WebViewController.m in Sources */,
 				B35498BF19767D6C00E86167 /* main.m in Sources */,
+				B35498FD1978D46100E86167 /* BusinessUtil.m in Sources */,
 				B35498EB1978BD1B00E86167 /* GCDViewController.m in Sources */,
+				B35498FE1978D46100E86167 /* MyUncaughtExceptionHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

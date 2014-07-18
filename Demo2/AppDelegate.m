@@ -8,12 +8,15 @@
 
 #import "AppDelegate.h"
 #import "WebViewController.h"
+#import "MyUncaughtExceptionHandler.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    [MyUncaughtExceptionHandler setDefaultHandler];
 
     WebViewController *web = [[WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:web];
@@ -39,6 +42,21 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
+    [self beginBackgroundTask];
+
+    // 延迟10秒执行：
+    double delayInSeconds = 10.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        NSString *msg = @"test delay!!!!";
+        NSString *fileName = @"testDelayFileTxt.txt";
+        NSString *path = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:fileName];
+
+        [msg writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    });
+
+    [self endBackgroundTask];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -54,6 +72,19 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - background task
+- (void)beginBackgroundTask {
+    _bgTask = [[UIApplication sharedApplication]beginBackgroundTaskWithExpirationHandler:^{
+        [self endBackgroundTask];
+    }];
+}
+
+- (void)endBackgroundTask {
+    [[UIApplication sharedApplication] endBackgroundTask:_bgTask];
+
+    _bgTask = UIBackgroundTaskInvalid;
 }
 
 @end
