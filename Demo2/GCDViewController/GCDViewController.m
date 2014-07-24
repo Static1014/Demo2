@@ -41,6 +41,7 @@
     [indicator release];
     [_contentView release];
     [_contentWeb release];
+    [_scrollView release];
     [super dealloc];
 }
 
@@ -119,6 +120,7 @@
             });
         } else {
             _contentView.text = [NSString stringWithFormat:@"Load failed!\n %@",[error description]];
+            [url release];
         }
     });
 }
@@ -128,6 +130,42 @@
 }
 
 - (IBAction)clickBtn2:(id)sender {
-    _contentView.text = @"click button2!";
+    _contentView.text = @"Loading image!";
+
+    for (UIView *temp in _scrollView.subviews) {
+        [temp removeFromSuperview];
+    }
+    _scrollView.scrollEnabled = YES;
+    [self loadImageFromUrl:@"http://s1.51cto.com/wyfs01/M01/10/63/wKioJlHm6BDTgZDTAAa5o4UiX6k728.jpg"];
+}
+
+- (void)loadImageFromUrl:(NSString*)url {
+    UILabel *loadingLable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height)];
+    loadingLable.text = @"Loading...";
+    loadingLable.textAlignment = NSTextAlignmentCenter;
+    loadingLable.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
+    loadingLable.textColor = [UIColor whiteColor];
+    [_scrollView addSubview:loadingLable];
+    [loadingLable release];
+
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+        UIImage *img = [UIImage imageWithData:data];
+        if (img != nil) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                for (UIView *temp in _scrollView.subviews) {
+                    [temp removeFromSuperview];
+                }
+
+                UIImageView *imgView = [[UIImageView alloc]initWithImage:img];
+                [imgView setFrame:CGRectMake(0, 0, img.size.width, img.size.height)];
+                [_scrollView addSubview:imgView];
+                NSLog(@"load 1111111111");
+                _scrollView.contentSize = img.size;
+                [imgView release];
+            });
+        }
+    });
+
 }
 @end

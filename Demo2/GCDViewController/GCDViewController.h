@@ -12,6 +12,7 @@
 
 @property (retain, nonatomic) IBOutlet UIWebView *contentWeb;
 @property (retain, nonatomic) IBOutlet UITextView *contentView;
+@property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
 - (IBAction)clickBtn1:(id)sender;
 - (IBAction)clickBtn2:(id)sender;
 @end

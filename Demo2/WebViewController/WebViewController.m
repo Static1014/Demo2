@@ -8,6 +8,7 @@
 
 #import "WebViewController.h"
 #import "GCDViewController.h"
+#import "LoadImagesViewController.h"
 
 @interface WebViewController () {
     BOOL menuIsShow;
@@ -53,6 +54,7 @@
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"http://www.baidu.com"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
     _webView.delegate = self;
     [_webView loadRequest:request];
+    [request release];
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
@@ -118,13 +120,17 @@
 
     GCDViewController *one = [[GCDViewController alloc]initWithNibName:@"GCDViewController" bundle:nil];
     [self.navigationController pushViewController:one animated:YES];
+    [one release];
 }
 
 - (IBAction)clickTwo:(id)sender {
     if (menuIsShow) {
         [self showRightMenu];
     }
-    NSLog(@"click 2222222");
+
+    LoadImagesViewController *two = [[LoadImagesViewController alloc]initWithNibName:@"LoadImagesViewController" bundle:nil];
+    [self.navigationController pushViewController:two animated:YES];
+    [two release];
 }
 
 - (IBAction)clickThree:(id)sender {

@@ -25,6 +25,8 @@
 		B35498EC1978BD1B00E86167 /* GCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35498EA1978BD1B00E86167 /* GCDViewController.xib */; };
 		B35498FD1978D46100E86167 /* BusinessUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B35498FA1978D46100E86167 /* BusinessUtil.m */; };
 		B35498FE1978D46100E86167 /* MyUncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B35498FC1978D46100E86167 /* MyUncaughtExceptionHandler.m */; };
+		B3E52A5E1980AB2F008AA0AB /* LoadImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E52A5C1980AB2F008AA0AB /* LoadImagesViewController.m */; };
+		B3E52A5F1980AB2F008AA0AB /* LoadImagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E52A5D1980AB2F008AA0AB /* LoadImagesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,9 @@
 		B35498FA1978D46100E86167 /* BusinessUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusinessUtil.m; path = Util/BusinessUtil.m; sourceTree = "<group>"; };
 		B35498FB1978D46100E86167 /* MyUncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyUncaughtExceptionHandler.h; path = Util/MyUncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		B35498FC1978D46100E86167 /* MyUncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyUncaughtExceptionHandler.m; path = Util/MyUncaughtExceptionHandler.m; sourceTree = "<group>"; };
+		B3E52A5B1980AB2F008AA0AB /* LoadImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadImagesViewController.h; path = LoadImages/LoadImagesViewController.h; sourceTree = "<group>"; };
+		B3E52A5C1980AB2F008AA0AB /* LoadImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadImagesViewController.m; path = LoadImages/LoadImagesViewController.m; sourceTree = "<group>"; };
+		B3E52A5D1980AB2F008AA0AB /* LoadImagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadImagesViewController.xib; path = LoadImages/LoadImagesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +131,9 @@
 				B35498C119767D6C00E86167 /* AppDelegate.h */,
 				B35498C219767D6C00E86167 /* AppDelegate.m */,
 				B35498ED1978D22D00E86167 /* Util */,
-				B35498E71978BCED00E86167 /* GCD */,
 				B35498E119767D9200E86167 /* WebView */,
+				B35498E71978BCED00E86167 /* GCD */,
+				B3E52A5A1980AAD9008AA0AB /* LoadImages */,
 				B35498C419767D6C00E86167 /* Images.xcassets */,
 				B35498B919767D6C00E86167 /* Supporting Files */,
 			);
@@ -192,6 +198,16 @@
 				B35498FC1978D46100E86167 /* MyUncaughtExceptionHandler.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		B3E52A5A1980AAD9008AA0AB /* LoadImages */ = {
+			isa = PBXGroup;
+			children = (
+				B3E52A5B1980AB2F008AA0AB /* LoadImagesViewController.h */,
+				B3E52A5C1980AB2F008AA0AB /* LoadImagesViewController.m */,
+				B3E52A5D1980AB2F008AA0AB /* LoadImagesViewController.xib */,
+			);
+			name = LoadImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E52A5F1980AB2F008AA0AB /* LoadImagesViewController.xib in Resources */,
 				B35498E619767DC200E86167 /* WebViewController.xib in Resources */,
 				B35498BD19767D6C00E86167 /* InfoPlist.strings in Resources */,
 				B35498C519767D6C00E86167 /* Images.xcassets in Resources */,
@@ -297,6 +314,7 @@
 				B35498C319767D6C00E86167 /* AppDelegate.m in Sources */,
 				B35498E519767DC200E86167 /* WebViewController.m in Sources */,
 				B35498BF19767D6C00E86167 /* main.m in Sources */,
+				B3E52A5E1980AB2F008AA0AB /* LoadImagesViewController.m in Sources */,
 				B35498FD1978D46100E86167 /* BusinessUtil.m in Sources */,
 				B35498EB1978BD1B00E86167 /* GCDViewController.m in Sources */,
 				B35498FE1978D46100E86167 /* MyUncaughtExceptionHandler.m in Sources */,
@@ -500,6 +518,7 @@
 				B35498DD19767D6C00E86167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B35498DE19767D6C00E86167 /* Build configuration list for PBXNativeTarget "Demo2Tests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +527,7 @@
 				B35498E019767D6C00E86167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
